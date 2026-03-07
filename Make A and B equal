@@ -1,0 +1,27 @@
+Make A and B equal
+Chef has two numbers A and B.
+
+In one operation, Chef can choose either A or B and multiply it by 2.
+
+Determine whether he can make both A and B equal after any number (possibly, zero) of moves.
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int t;
+	    Scanner sc = new Scanner(System.in);
+	    t = sc.nextInt();
+	    while(t --> 0){
+	        int a = sc.nextInt();
+	        int b = sc.nextInt();
+	        
+	        if(a/b == 0 || a==b){
+	            System.out.println("YES");
+	        }
+	        else{
+	            System.out.println("NO");
+	        }
+	    }
+	}
+}
