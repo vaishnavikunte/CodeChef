@@ -1,0 +1,39 @@
+Complementary Strand in a DNA
+You are given the sequence of Nucleotides of one strand of DNA through a string S of length N. S contains the character A,T,C, and G only.
+
+Chef knows that:A is complementary to T.
+T is complementary to A.
+C is complementary to G.
+G is complementary to C.
+Using the string S, determine the sequence of the complementary strand of the DNA.
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		
+		while(t-->0){
+		    int n = sc.nextInt();
+		    String s = sc.next();
+		    char ch;
+		    int i;
+		    StringBuilder result = new StringBuilder();
+		    for(i=0;i<n;i++){
+		        ch = s.charAt(i);
+		        if(ch == 'A') result.append('T');
+		        else if(ch == 'T') result.append('A');
+		        else if(ch == 'C') result.append('G');
+		        else if(ch == 'G') result.append('C');
+		    }
+		    System.out.println(result);
+		    
+		}
+
+	}
+}
