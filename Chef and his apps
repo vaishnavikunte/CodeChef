@@ -1,0 +1,57 @@
+Chef and His Apps
+
+Chef's phone has a total storage capacity of S MB.
+
+He already has 2 apps installed on his phone:
+
+The first app occupies X MB
+The second app occupies Y MB
+
+Chef wants to install a third app which requires Z MB of storage.
+
+However, if there is not enough free space, Chef may need to delete one or both of the existing apps.
+
+❓ Task
+
+For each test case, determine the minimum number of apps Chef needs to delete so that there is enough space to install the new app.
+
+📥 Input Format
+The first line contains an integer T — number of test cases.
+Each test case contains four integers:
+S → total storage capacity
+X → space used by first app
+Y → space used by second app
+Z → space required for new app
+📤 Output Format
+
+For each test case, print a single integer:
+
+0 → if no app needs to be deleted
+1 → if deleting one app is enough
+2 → if both apps must be deleted
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		
+		while(t-->0){
+		    int s = sc.nextInt();
+		    int x = sc.nextInt();
+		    int y = sc.nextInt();
+		    int z = sc.nextInt();
+		    
+		    if(x+y+z<=s) System.out.println(0);
+		    else if(x+z<=s || y+z<=s) System.out.println(1);
+		    else System.out.println(2);
+		}
+
+	}
+}
