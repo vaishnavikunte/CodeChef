@@ -1,0 +1,39 @@
+Subscriptions
+
+A new TV streaming service called Chef-TV has started in Chefland.
+
+A group of N friends want to buy Chef-TV subscriptions. One subscription can be shared by 6 people, and the cost of one subscription is X rupees.
+
+Determine the minimum total cost required so that all N friends can use Chef-TV.
+
+Input Format
+The first line contains an integer T, the number of test cases.
+Each test case contains two integers N and X — the number of friends and the cost of one subscription.
+
+Output Format
+For each test case, print the minimum total cost required so that all friends can use Chef-TV.
+
+import java.util.*;
+
+class Codechef
+{
+    public static void main (String[] args) throws java.lang.Exception
+    {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+
+        while(t-- > 0){
+            int n = sc.nextInt();
+            int x = sc.nextInt();
+
+            int subscriptions = n / 6;
+
+            if(n % 6 != 0){
+                subscriptions = subscriptions + 1;
+            }
+
+            int cost = subscriptions * x;
+            System.out.println(cost);
+        }
+    }
+}
