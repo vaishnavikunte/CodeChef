@@ -1,0 +1,42 @@
+Greater Average
+
+You are given three numbers A, B, and C. Determine whether the average of A and B is strictly greater than C.
+
+Note: The average of A and B is defined as (A+B)/2. For example, the average of 5 and 9 is 7, and the average of 5 and 8 is 6.5.
+
+Input Format
+The first line contains an integer T, the number of test cases.
+Each test case contains three integers A, B, and C.
+
+Output Format
+For each test case, print YES if the average of A and B is strictly greater than C, otherwise print NO.
+
+The output is case-insensitive (e.g., YES, yes, yEs are all valid).
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc= new Scanner(System.in);
+		int t=sc.nextInt();
+		
+		
+		while(t-->0){
+		    int a=sc.nextInt();
+    		int b=sc.nextInt();
+    		int c=sc.nextInt();
+    		
+    		if((a+b)/2.0 > c){
+    		    System.out.println("YES");
+    		}else{
+    	    System.out.println("NO");
+    		}
+    	  
+		}
+
+	}
+}
